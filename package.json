@@ -1,0 +1,62 @@
+{
+  "name": "react-pwa",
+  "version": "0.0.1",
+  "description": "React Progressive Web App starter",
+  "main": "index.js",
+  "scripts": {
+    "build": "NODE_ENV=production webpack --config webpack.config.js",
+    "build:dev": "NODE_ENV=development webpack --config webpack.config.js",
+    "build:backend": "NODE_ENV=production babel ./server/ -d ./dist/server/ --source-maps",
+    "launch:dev": "NODE_ENV=development nodemon -r babel-register -r babel-polyfill ./dist/server/app.js",
+    "launch": "NODE_ENV=production node -r babel-register -r babel-polyfill ./dist/server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kirill3333/react-pwa.git"
+  },
+  "author": "Kirill Novikov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kirill3333/react-pwa/issues"
+  },
+  "homepage": "https://github.com/kirill3333/react-pwa#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "bulma": "^0.6.1",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^4.0.8",
+    "redux": "^3.7.2",
+    "redux-actions": "^2.2.1",
+    "redux-thunk": "^2.2.0",
+    "winston": "^2.4.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-es2015-parameters": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "compression-webpack-plugin": "^1.0.1",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "nodemon": "^1.12.1",
+    "style-loader": "^0.19.0",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.9.1",
+    "webpack-bundle-analyzer": "^2.9.1",
+    "webpack-merge": "^4.1.1",
+    "why-did-you-update": "^0.1.0"
+  }
+}
