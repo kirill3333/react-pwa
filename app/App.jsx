@@ -1,17 +1,15 @@
 import React, { Component } from 'react'
-import Root from './modules/Root/index'
+import Root from './modules/Root'
+import Navbar from './modules/Navbar'
 import { Link } from 'react-router-dom'
 
 class App extends Component {
   render () {
     return (
-      <div>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/catalog">Catalog</Link></li>
-        </ul>
-        <Root />
-      </div>
+      [
+        <Navbar key='1' />,
+        <Root key='2' />
+      ]
     )
   }
 }

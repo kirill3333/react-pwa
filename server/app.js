@@ -7,6 +7,7 @@ import React from 'react'
 import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router'
 import App from '../../app/App.jsx'
+import { renderTemplate } from './template'
 
 const app = express()
 
@@ -32,23 +33,7 @@ function renderApp(req, res) {
       <App />
     </StaticRouter>
   )
-  return renderPage(html)
-}
-
-function renderPage(appHtml) {
-  return `<!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>React PWA</title>
-      </head>
-      <body>
-        <div id="app">${appHtml}</div>
-        <script src="static/app.js"></script>
-      </body>
-    </html>
-   `
+  return renderTemplate(html)
 }
 
 app.listen(process.env.PORT, () => winston.log('info', `Server started on ${process.env.PORT}`))
