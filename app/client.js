@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { browserHistory } from 'react-router'
 import App from './App'
 import store from './store'
+import '../node_modules/bulma/css/bulma.css'
 
 if (process.env.NODE_ENV !== 'production') {
   const { whyDidYouUpdate } = require('why-did-you-update')
