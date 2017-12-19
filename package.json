@@ -6,9 +6,9 @@
   "scripts": {
     "build": "NODE_ENV=production webpack --config webpack.config.js",
     "build:dev": "NODE_ENV=development webpack --config webpack.config.js",
-    "build:backend": "NODE_ENV=production babel ./server/ -d ./dist/server/ --source-maps",
-    "launch:dev": "NODE_ENV=development nodemon -r babel-register -r babel-polyfill ./dist/server/app.js",
-    "launch": "NODE_ENV=production node -r babel-register -r babel-polyfill ./dist/server/app.js"
+    "build:server": "NODE_ENV=production babel ./server/ -d ./dist/server/ --source-maps",
+    "server:dev": "NODE_ENV=development nodemon -r babel-register -r babel-polyfill ./dist/server/app.js",
+    "server": "NODE_ENV=production node -r babel-register -r babel-polyfill ./dist/server/app.js"
   },
   "repository": {
     "type": "git",
