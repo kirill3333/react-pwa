@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "NODE_ENV=production webpack --config webpack.config.js",
-    "build:dev": "NODE_ENV=development webpack --config webpack.config.js",
+    "build:dev": "NODE_ENV=development webpack --display-entrypoints --config webpack.config.js",
     "build:server": "NODE_ENV=production babel ./server/ -d ./dist/server/ --source-maps",
     "server:dev": "NODE_ENV=development nodemon -r babel-register -r babel-polyfill ./dist/server/app.js",
     "server": "NODE_ENV=production node -r babel-register -r babel-polyfill ./dist/server/app.js"
@@ -48,9 +48,10 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "compression-webpack-plugin": "^1.0.1",
+    "copy-webpack-plugin": "^4.3.0",
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.2",
-    "file-loader": "^1.1.5",
+    "file-loader": "^1.1.6",
     "nodemon": "^1.12.1",
     "style-loader": "^0.19.0",
     "url-loader": "^0.6.2",
