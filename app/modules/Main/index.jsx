@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
+import { PromoContainer } from '../Promo'
 
 class Main extends Component {
-  render () {
-    return (
-      <h1>Main</h1>
-    )
-  }
+    render() {
+        return <PromoContainer />
+    }
 }
 
 export default Main
